@@ -25,7 +25,7 @@ public class TestLoaderRunner implements CommandLineRunner {
     StopWatch stopWatch = new StopWatch();
     stopWatch.start();
     for (int i = 0; i < numberOfInserts; ++i) {
-      if (i % 1000 == 0) {
+      if (i % 10 == 0) {
         log.info("Completed " + i);
       }
       jdbcTemplate.update(query, i);
